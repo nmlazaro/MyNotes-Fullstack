@@ -1,5 +1,9 @@
 from fastapi import FastAPI
 from routes import notes_routes
+from database import engine
+from models import notes_models
+
+notes_models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
