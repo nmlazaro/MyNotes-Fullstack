@@ -18,7 +18,5 @@ def get_db():
 
     try:
         yield db
-    except Exception as err:
-        print(f'Error trying to execute get_db() -> Error: {err}')
     finally:
         db.close()
